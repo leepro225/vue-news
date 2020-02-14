@@ -1,17 +1,16 @@
 <template>
   <div id="app">
-    hello
+    <ToolBar></ToolBar>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-
+import ToolBar from './components/ToolBar'
 
 export default {
-  methods: {
-    fetchData() {
-      console.log('hello');
-    }
+  components: {
+    ToolBar
   }
 }
 </script>
