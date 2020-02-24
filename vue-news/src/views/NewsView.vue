@@ -1,6 +1,7 @@
 <template>
     <div>
-        <div v-for="user in this.$store.state.news" v-bind:key="user.id">{{ user.title }}</div>
+        <p v-for="user in this.$store.state.news" v-bind:key="user.id">
+            <a :href="user.url">{{ user.title }}</a>   <small style="color:#aaa5a5;">{{user.time_ago}} by {{user.user}}</small></p>
    </div>
 </template>
 
