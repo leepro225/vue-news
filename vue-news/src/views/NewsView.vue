@@ -1,8 +1,9 @@
 <template>
     <div>
-        <p v-for="user in this.$store.state.news" v-bind:key="user.id">
-            <a :href="user.url">{{ user.title }}</a>   <small style="color:#aaa5a5;">{{user.time_ago}} 
-                by <router-link to="`/user/${user.user}`">{{user.user}}</router-link></small></p>
+        <p v-for="item in this.$store.state.news" v-bind:key="item.id">
+            <a :href="item.url">{{ item.title }}</a>   
+            <small style="color:#aaa5a5;">{{item.time_ago}} by 
+                <router-link v-bind:to="`/user/${item.user}`">{{item.user}}</router-link></small></p>
    </div>
 </template>
 
