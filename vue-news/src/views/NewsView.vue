@@ -18,11 +18,7 @@
                 </div>
             </li>
         </ul>
-        <p v-for="item in this.$store.state.news" v-bind:key="item.id">
-            <a :href="item.url" class="link-text">{{ item.title }}</a>   
-            <small style="color:#aaa5a5;">{{item.time_ago}} by 
-                <router-link v-bind:to="`/user/${item.user}`">{{item.user}}</router-link></small></p>
-   </div>
+       </div>
 </template>
 
 <script>
