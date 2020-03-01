@@ -33,4 +33,12 @@ export default {
 .fade-enter, .fade-leave-to /* .transitionName-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
+
+body {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration:none;
+}
 </style>
