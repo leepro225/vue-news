@@ -7,14 +7,25 @@
             </div>
             <div>
                 <p class="news-title">
-                    <a v-bind:href="item.url">
-                        {{ item.title }}
-                    </a>
+                    <template v-if="item.domain">
+                        <a v-bind:href="item.url">
+                            {{ item.title }}
+                        </a>
+                    </template>
+                    <template v-else>
+                        <router-link v-bind:to="`item/${item.id}`">
+                            {{ item.title }}
+                        </router-link>    
+                    </template>
+                    
                 </p>
                 <small>
                     {{item.time_ago}}
                     by
-                    <a :href="item.url">{{item.domain}}</a>
+                    <router-link v-if="item.user"
+                                 v-bind:to="`/user/${item.user}`"
+                                 class="link-text"></router-link>
+                    <a v-else :href="item.url">{{item.domain}}</a>
                 </small>
             </div>
         </li>
