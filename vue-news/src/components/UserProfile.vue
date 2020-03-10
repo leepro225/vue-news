@@ -6,7 +6,7 @@
         <div class="user-description">
             <div>{{ userInfo.id }}</div>
         </div>
-        <div class="time">
+        <div class="time" style="display:block;">
             {{ userInfo.created }}
         </div>
     </div>    
