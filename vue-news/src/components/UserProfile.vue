@@ -4,11 +4,16 @@
             <i class="fas fa-user"></i>
         </div>
         <div class="user-description">
-            <div>{{ userInfo.id }}</div>
+           <slot name="username">
+               <!-- 상위 컴포넌트에서 정의할 영역 -->
+           </slot>
         </div>
-        <div class="time" style="display:block;">
-            {{ userInfo.created }}
+        <div class="time">
+            <slot name="time">
+                <!-- 상위 컴포넌트에서 정의할 영역 -->
+            </slot>
         </div>
+        <slot name="karma"></slot>
     </div>    
 </template>
 <script>
