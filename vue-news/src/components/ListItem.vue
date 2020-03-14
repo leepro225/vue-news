@@ -35,16 +35,16 @@
 <script>
 export default {
     created() {
-        const name = this.$route.name;
-        let actionsName = '';
-        if (name === 'news') {
-           actionsName = 'FETCH_NEWS';
-        } else if (name === 'ask') {
-           actionsName = 'FETCH_ASK';
-        } else if (name === 'jobs') {
-           actionsName = 'FETCH_JOBS';
-        }
-        this.$store.dispatch(actionsName);
+        // const name = this.$route.name;
+        // let actionsName = '';
+        // if (name === 'news') {
+        //    actionsName = 'FETCH_NEWS';
+        // } else if (name === 'ask') {
+        //    actionsName = 'FETCH_ASK';
+        // } else if (name === 'jobs') {
+        //    actionsName = 'FETCH_JOBS';
+        // }
+        // this.$store.dispatch(actionsName);
     },
     computed: {
         listItems() {
