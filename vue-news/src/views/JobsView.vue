@@ -11,7 +11,7 @@ export default {
         ListItem
     },
     created() {
-        this.$store.dispatch('FETCH_JOBS');
+        // this.$store.dispatch('FETCH_JOBS');
     }
 }
 </script>

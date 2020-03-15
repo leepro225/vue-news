@@ -3,5 +3,6 @@ export default {
     jobs: [],
     ask: [],
     user: {},
-    item: []
+    item: [],
+    list: []
 }

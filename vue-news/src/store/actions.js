@@ -3,13 +3,15 @@ import {
     fetchJobsList, 
     fetchAskList,
     fetchUserInfo,
-    fetchCommentItem } from '../api/index'
+    fetchCommentItem, 
+    fetchList} from '../api/index'
 
 export default {
     FETCH_NEWS(context) {
         fetchNewsList()
             .then(res => {
                 context.commit('SET_NEWS', res.data);
+                return res;
             })
             .catch(err => {
                 console.log(err);
@@ -45,11 +47,17 @@ export default {
     FETCH_ITEM({ commit }, id) {
         fetchCommentItem(id)
             .then(({ data }) => {
-                console.log(data)
                 commit('SET_ITEM', data);
             })
             .catch(err => {
                 console.log(err);
             });
+    }
+    ,FETCH_LIST({commit}, pageName) {
+            fetchList(pageName)
+                .then(({ data }) => {
+                    commit('SET_LIST', data);
+                })
+                .catch(e => console.log(e));
     }
 }
