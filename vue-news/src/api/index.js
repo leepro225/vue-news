@@ -13,7 +13,11 @@ function fetchAskList() {
 }
 
 function fetchJobsList() {
-    return axios.get(`${config.baseUrl}jobs/1.json`);
+    try {
+        return axios.get(`${config.baseUrl}jobs/1.json`);
+    } catch(error) {
+        console.log(error);
+    }
 }
 
 function fetchUserInfo(userName) {
